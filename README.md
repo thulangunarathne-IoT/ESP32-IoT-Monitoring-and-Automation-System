@@ -309,3 +309,17 @@ Electronic & Communication Engineer|
 Embedded Systems & IoT Developer
 
 GitHub: thulangunarathne-iot
+
+## 📸 Project Gallery
+
+### Node-RED Dashboard
+
+![Node-RED Dashboard](Node-RED%20Dashboard.PNG)
+
+### FlowFuse Cloud Dashboard
+
+![FlowFuse Cloud Dashboard](FlowFuse%20Dashboard%201.PNG)
+
+### Gas Event Log
+
+![Gas Event Log](Gas%20Event%20Log%20-%20FlowFuse.PNG)
