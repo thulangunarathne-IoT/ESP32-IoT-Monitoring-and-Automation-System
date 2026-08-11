@@ -1,6 +1,6 @@
-# ESP32-IoT-Monitoring-and-Automation-System
-Industrial IoT monitoring and automation system using ESP32, MQTT, Node-RED, sensors, and relay based load control.
-The system provides real-time monitoring of environmental conditions, gas levels, electrical current/power consumption, Wi-Fi strength, Device status motion detection, light detection, automated light control, and manual load & alarm control through a Node-RED dashboard.
+# ESP32-Cloud based-IoT-Monitoring-and-Automation-System
+Industrial cloud based IoT monitoring and automation system using ESP32, MQTT, FlowFuse/Node-RED, sensor, buzzer, and relay based load control.
+The system provides real-time monitoring of environmental conditions, gas levels, electrical current/power consumption, Wi-Fi strength, Event logs, Device status, motion detection, light detection, automated light control, and manual load & alarm control through a FlowFuse/Node-RED dashboard.
 
 🚀 Features
 -
@@ -24,9 +24,7 @@ The system provides real-time monitoring of environmental conditions, gas levels
 
 🔋 Energy consumption monitoring (kWh)
 
-📡 MQTT-based communication
-
-📊 Real-time Node-RED dashboard
+📝 Event logging for system activities and events
 
 📶 ESP32 device status monitoring
 
@@ -34,36 +32,65 @@ The system provides real-time monitoring of environmental conditions, gas levels
 
 🔔 Audible gas alarm using a buzzer
 
+📡 MQTT-based communication
+
+📊 Real-time FlowFuse/Node-RED Cloud dashboard
+
 
 🏗️ System Architecture
 -
-Sensors:
-│ DHT22 │
-│ MQ-2 │
-│ PIR │
-│ LDR │
-│ ACS712 │
+ ```
+┌─────────────────────┐
+│ Sensors & Actuators │
+│                     │
+│ DHT22               │
+│ MQ-2                │
+│ PIR                 │
+│ LDR                 │
+│ ACS712              |
+| Relay               |
+| Buzzer              │
+└──────────┬──────────┘
+            │
+            ▼
+┌─────────────────────┐
+│        ESP32        │
+│                     │
+│ Sensor Processing   │
+│ Automation Logic    │
+│ Relay/Buzzer Control│
+│ Wi-Fi / MQTT        │
+└──────────┬──────────┘
+            │
+     MQTT Messages
+            │
+            ▼
+┌─────────────────────┐
+│      MQTT Broker    │
+└──────────┬──────────┘
+            │
+            ▼
+┌─────────────────────┐
+|  FlowFuse/Node-RED  |
+└──────────┬──────────┘
+            │
+            ▼
+┌─────────────────────┐
+|   Cloud Dashboard   │
+│                     │
+│ Monitoring          │
+│ Manual Control      │
+│ Event Log           | 
+| Alarms              │
+└─────────────────────┘
 
-ESP32:
-│ Sensor Processing │
-│ Automation Logic │
-│ Relay Control │
-│ Wi-Fi / MQTT │
-
-MQTT Broker: | Hive MQ |
-
-Node-RED:
-│ Monitoring │
-│ Dashboard │
-│ Manual Control │
-│ Alarm │
-
+```
 ⚙️ Automation Logic
 -
 Automatic Lighting:
 
 The system can automatically control a connected light based on environmental conditions:
-
+```
 Dark + Motion Detected
 ↓
 ESP32 detects conditions
@@ -72,27 +99,29 @@ Relay ON
 ↓
 Light ON
 
+```
 Manual Load and alarm Control:
 
-The Node-RED dashboard provides manual control of the connected load and alarm.
-
+The FlowFuse/Node-RED Cloud dashboard provides manual control of the connected load and alarm.
+```
 User
 ↓
-Node-RED Dashboard
+FlowFuse/Node-RED Cloud Dashboard
 ↓
 MQTT
 ↓
 ESP32
 ↓
-Relay
+Relay/Alarm
 ↓
-Load/Alarm
+Load
 
+```
 Manual control allows the user to override or directly control the connected load and alarm from the dashboard.
 
 📊 Monitoring
 -
-The Node-RED dashboard provides real-time information including:
+The FlowFuse/Node-RED Cloud dashboard provides real-time information including:
 
 Temperature
 
@@ -118,7 +147,11 @@ Wi-Fi strength
 
 Load status
 
+Load relay status
+
 Gas alarm status
+
+Event Log
 
 🚨 Gas Detection
 -
@@ -128,7 +161,7 @@ The ESP32 processes the sensor reading and activates an audible alarm when the g
 ⚡ Energy Monitoring
 -
 An ACS712 current sensor is used to measure the current consumed by the connected AC load.
-The ESP32 sends the data through MQTT for visualization on the Node-RED dashboard and Node-RED calculates electrical power and energy consumption.
+The ESP32 sends the current data through MQTT and FlowFuse/Node-RED calculates electrical power and energy consumption for visualization on the FlowFuse/Node-RED Cloud dashboard.
 
 🧰 Hardware
 -
@@ -168,7 +201,7 @@ C/C++
 
 MQTT.
 
-Node-RED
+FlowFuse/Node-RED
 
 Mosquitto/HiveMQ-compatible MQTT communication
 
@@ -178,13 +211,13 @@ JSON/MQTT messaging
 
 📡 Communication
 -
-The ESP32 communicates with the Node-RED system using the MQTT protocol.
+The ESP32 communicates with the FlowFuse/Node-RED system using the MQTT protocol.
 
 Example MQTT topics used in the project include:
 
 factory/room1/device/status
 
-factory/room101/motion
+factory/room1/motion
 
 MQTT provides lightweight and efficient communication between the ESP32 and the monitoring/control system.
 
@@ -196,9 +229,9 @@ Monitor multiple sensors using an ESP32
 
 Send real-time sensor information using MQTT
 
-Visualize data through a Node-RED dashboard
+Visualize data through a FlowFuse/Node-RED Cloud dashboard
 
-Automate electrical loads based on sensor conditions
+Automate Lighting based on sensor conditions
 
 Provide manual remote load control
 
@@ -222,7 +255,7 @@ IoT Development
 
 MQTT Communication
 
-Node-RED
+FlowFuse/Node-RED
 
 Sensor Integration
 
