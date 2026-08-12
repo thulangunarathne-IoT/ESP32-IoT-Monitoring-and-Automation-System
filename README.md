@@ -329,6 +329,10 @@ GitHub: thulangunarathne-iot
 
 ![FlowFuse Cloud Dashboard](/Images/FlowFuse%20Dashboard%201.PNG)
 
+### Inside The Device
+
+![Inside The Device](/Images/Inside_the_Device.png)
+
 ### Complete Device
 
 ![Complete Device](/Images/Complete_Device.png)
