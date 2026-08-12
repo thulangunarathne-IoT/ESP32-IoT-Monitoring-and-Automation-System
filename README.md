@@ -85,9 +85,18 @@ The system provides real-time monitoring of environmental conditions, gas levels
 └─────────────────────┘
 
 ```
+## 📚 Project Documentation
+
+### 📐 System Wiring Diagram
+
+The wiring diagram shows the ESP32 GPIO assignments, sensor connections, power distribution, relay and buzzer driver circuits, and the overall system architecture.
+
+![ESP32 IoT System Wiring Diagram](Hardware_Wiring_Diagram.PNG)
+
+
 ⚙️ Automation Logic
 -
-Automatic Lighting:
+### Automatic Lighting:
 
 The system can automatically control a connected light based on environmental conditions:
 ```
@@ -100,7 +109,7 @@ Relay ON
 Light ON
 
 ```
-Manual Load and alarm Control:
+### Manual Load and alarm Control:
 
 The FlowFuse/Node-RED Cloud dashboard provides manual control of the connected load and alarm.
 ```
@@ -121,7 +130,7 @@ Manual control allows the user to override or directly control the connected loa
 
 📊 Monitoring
 -
-The FlowFuse/Node-RED Cloud dashboard provides real-time information including:
+### The FlowFuse/Node-RED Cloud dashboard provides real-time information including:
 
 Temperature
 
@@ -223,7 +232,7 @@ MQTT provides lightweight and efficient communication between the ESP32 and the 
 
 🎯 Project Objectives
 -
-The main objectives of this project are:
+### The main objectives of this project are:
 
 Monitor multiple sensors using an ESP32
 
@@ -243,7 +252,7 @@ Demonstrate practical Industrial IoT concepts
 
 🔧 Skills Demonstrated
 -
-This project demonstrates practical experience in:
+### This project demonstrates practical experience in:
 
 Embedded Systems
 
@@ -279,7 +288,7 @@ This project was designed, assembled, programmed, tested, and integrated as a co
 
 🔮 Future Improvements
 -
-Possible future improvements include:
+### Possible future improvements include:
 
 ESP32-CAM integration
 
@@ -303,7 +312,7 @@ User authentication and security
 
 👨‍💻 Author
 -
-Thulan Gunarathne
+### Thulan Gunarathne
 
 Electronic & Communication Engineer|
 Embedded Systems & IoT Developer
