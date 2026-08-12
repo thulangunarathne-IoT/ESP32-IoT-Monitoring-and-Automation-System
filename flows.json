@@ -1,0 +1,2032 @@
+[
+    {
+        "id": "2d84ddd3499d6614",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "18dceb7599bd28ac",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "c8b990c492d98e72",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d0935acc7c52bce5",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "9e0e6828a6962a32",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#191a1a",
+            "primary": "#0094ce",
+            "bgPage": "#b5b5b5",
+            "groupBg": "#ffffff",
+            "groupOutline": "#b7b3b3"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3c76a34aeb836e38",
+        "type": "ui-page",
+        "name": "Industrial IoT Monitor",
+        "ui": "d0935acc7c52bce5",
+        "path": "/iot",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e0e6828a6962a32",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "332108b66257035f",
+        "type": "ui-group",
+        "name": "Environment Monitoring",
+        "page": "3c76a34aeb836e38",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "6ad6c606458d6000",
+        "type": "ui-group",
+        "name": "Motion Monitor",
+        "page": "4dd50b92a0a9d99f",
+        "width": "16",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9de4e8d777784e1d",
+        "type": "ui-group",
+        "name": "Energy Monitoring & Device Control",
+        "page": "3c76a34aeb836e38",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "be0d1b6e95b75180",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4dd50b92a0a9d99f",
+        "type": "ui-page",
+        "name": "Motion Event Log",
+        "ui": "d0935acc7c52bce5",
+        "path": "/motion-history",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e0e6828a6962a32",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "c8ae01e3428a8438",
+        "type": "ui-page",
+        "name": "Gas Leak Event Log",
+        "ui": "d0935acc7c52bce5",
+        "path": "/gasleak-history",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e0e6828a6962a32",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "1c566ab799c8cdef",
+        "type": "ui-group",
+        "name": "Gas Leak Monitor",
+        "page": "c8ae01e3428a8438",
+        "width": "16",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "05e0fce4049260c0",
+        "type": "ui-page",
+        "name": "Over Power Event Log",
+        "ui": "d0935acc7c52bce5",
+        "path": "/overpower-history",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e0e6828a6962a32",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "99b64f2fb689c237",
+        "type": "ui-group",
+        "name": "Over Power Monitor",
+        "page": "05e0fce4049260c0",
+        "width": "16",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "941cd93edc518334",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "Temperature",
+        "group": "332108b66257035f",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0b13ef",
+                "text": "Cool",
+                "textType": "str"
+            },
+            {
+                "from": "18",
+                "color": "#10c61c",
+                "text": "Comfortable",
+                "textType": "str"
+            },
+            {
+                "from": "25",
+                "color": "#f7fb0e",
+                "text": "Warm",
+                "textType": "str"
+            },
+            {
+                "from": "35",
+                "color": "#ea5353",
+                "text": "Hot",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 450,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a950652f0d63493",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "Humidity",
+        "group": "332108b66257035f",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#d8d1cf",
+                "text": "Dry",
+                "textType": "str"
+            },
+            {
+                "from": "30",
+                "color": "#19d016",
+                "text": "Normal",
+                "textType": "str"
+            },
+            {
+                "from": "60",
+                "color": "#f0f40b",
+                "text": "High",
+                "textType": "str"
+            },
+            {
+                "from": "80",
+                "color": "#ed2e0c",
+                "text": "Very High",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff4da083ecf70860",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "Light staue",
+        "label": "Light state:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#0f34eb",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a4d9d806ce5b372b",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "name": "Gas status",
+        "label": "Gas status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#2913cd",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3f8ca378f735674f",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "Motion status",
+        "label": "Motion status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#2630ba",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 590,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "25398f45ed796958",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "name": "Alarm status",
+        "label": "Alarm status : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 450,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "16a4b3faf333af2d",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "Current",
+        "group": "9de4e8d777784e1d",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Current",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "A",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "Normal",
+                "textType": "str"
+            },
+            {
+                "from": "0.5",
+                "color": "#ffc800",
+                "text": "High Load",
+                "textType": "str"
+            },
+            {
+                "from": "1",
+                "color": "#ea5353",
+                "text": "Overload",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "2",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 520,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70c59302b7f5b7ba",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Load status",
+        "label": "Load status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#0a18e6",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 530,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "3cf99a89ca4e2606",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "name": "Relay status",
+        "label": "Relay status : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 450,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "534fbbaf8c95e938",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "name": "Device status",
+        "label": "Device status : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#0c13df",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 640,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fea291631f91007e",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "941cd93edc518334"
+            ]
+        ]
+    },
+    {
+        "id": "b4cb82cb0d13e3e5",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "1a950652f0d63493"
+            ]
+        ]
+    },
+    {
+        "id": "898d0afc5b61bc39",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/light",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "ff4da083ecf70860",
+                "eadfc5050d7d3d6d"
+            ]
+        ]
+    },
+    {
+        "id": "fe501c3300103935",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/current",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 1100,
+        "wires": [
+            [
+                "09d2c39df0aff366",
+                "519379e43faa270c",
+                "3d150bee4e01d66e"
+            ]
+        ]
+    },
+    {
+        "id": "cf0354ad88089f0b",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/motion",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "966f08f3f8ae861c",
+                "3f8ca378f735674f",
+                "d258cdd7df184945"
+            ]
+        ]
+    },
+    {
+        "id": "cd8ec270e449697d",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/relay/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1540,
+        "wires": [
+            [
+                "3cf99a89ca4e2606"
+            ]
+        ]
+    },
+    {
+        "id": "280fcf54a88faed1",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/alarm/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1600,
+        "wires": [
+            [
+                "25398f45ed796958"
+            ]
+        ]
+    },
+    {
+        "id": "af4065c0c761509c",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/device/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "f3b89c3a7b87b070"
+            ]
+        ]
+    },
+    {
+        "id": "1911310a65d1f3c9",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/WiFi Strength",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 560,
+        "wires": [
+            [
+                "74e7545816d2a230"
+            ]
+        ]
+    },
+    {
+        "id": "b3d074627a0e47d3",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "WiFi Strength",
+        "group": "332108b66257035f",
+        "order": 8,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "WiFi Strength",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "dBm",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-100",
+                "color": "#e63e14",
+                "text": "Poor",
+                "textType": "str"
+            },
+            {
+                "from": "-80",
+                "color": "#d2ec09",
+                "text": "Weak",
+                "textType": "str"
+            },
+            {
+                "from": "-70",
+                "color": "#ffc800",
+                "text": "Fair",
+                "textType": "str"
+            },
+            {
+                "from": "-60",
+                "color": "#22d11f",
+                "text": "Good",
+                "textType": "str"
+            },
+            {
+                "from": "-50",
+                "color": "#077f05",
+                "text": "Excellent",
+                "textType": "str"
+            }
+        ],
+        "min": "-100",
+        "max": "-30",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74e7545816d2a230",
+        "type": "trigger",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "op1": "",
+        "op2": "-100",
+        "op1type": "pay",
+        "op2type": "num",
+        "duration": "7.5",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "b3d074627a0e47d3"
+            ]
+        ]
+    },
+    {
+        "id": "f3b89c3a7b87b070",
+        "type": "trigger",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "op1": "",
+        "op2": "OFFLINE",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "7.5",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 390,
+        "y": 700,
+        "wires": [
+            [
+                "534fbbaf8c95e938",
+                "4f60de2a092d4bd5",
+                "e33ba9fcb109779c",
+                "806ac56ce655c08f"
+            ]
+        ]
+    },
+    {
+        "id": "966f08f3f8ae861c",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "motion event log",
+        "func": "let log = flow.get(\"motionLog\") || [];\nif (msg.payload === \"MOTION DETECTED\"){\nlet now = new Date();\n\nlet date =\nString(now.getDate()).padStart(2, '0') + \"/\" +\nString(now.getMonth() + 1).padStart(2, '0') + \"/\" +\nnow.getFullYear();\n\nlet time =\nString(now.getHours()).padStart(2, '0') + \":\" +\nString(now.getMinutes()).padStart(2, '0') + \":\" +\nString(now.getSeconds()).padStart(2, '0');\n    log.unshift({\n        Time: date + \" \" + time,\n        Event: msg.payload\n    });\n\n    log = log.slice(0, 1);\n    flow.set(\"motionLog\", log);\n    msg.payload = log;\n\n    return msg;\n}\n\nreturn null;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "54c85317c666be20"
+            ]
+        ]
+    },
+    {
+        "id": "f9625a0986328cf3",
+        "type": "ui-switch",
+        "z": "2d84ddd3499d6614",
+        "name": "Load Relay",
+        "label": "Load Relay",
+        "group": "9de4e8d777784e1d",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 1400,
+        "wires": [
+            [
+                "a12c70bd14966864"
+            ]
+        ]
+    },
+    {
+        "id": "a12c70bd14966864",
+        "type": "mqtt out",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/relay/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "be0d1b6e95b75180",
+        "x": 390,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "3566eab26d0f8ca5",
+        "type": "mqtt out",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/alarm/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "be0d1b6e95b75180",
+        "x": 390,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "ab5eee4a1228d0d4",
+        "type": "mqtt out",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/light/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "be0d1b6e95b75180",
+        "x": 770,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d258cdd7df184945",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "motion set",
+        "func": "flow.set(\"motion\", msg.payload);\n\nlet light = flow.get(\"light\");\nif(msg.payload === \"MOTION DETECTED\" && light === \"DARK\"){\n    node.send({payload: 1});\n    let timer = flow.get(\"autoTimer\");\n    if(timer){\n        clearTimeout(timer);\n    }\n    timer = setTimeout(function(){\n        node.send({payload: 0});\n    }, 30000);\n    flow.set(\"autoTimer\", timer);\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "ab5eee4a1228d0d4"
+            ]
+        ]
+    },
+    {
+        "id": "eadfc5050d7d3d6d",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "light set",
+        "func": "flow.set(\"light\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54c85317c666be20",
+        "type": "ui-table",
+        "z": "2d84ddd3499d6614",
+        "group": "6ad6c606458d6000",
+        "name": "Motion Event Log",
+        "label": "Motion History",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": "20",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 670,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "519379e43faa270c",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Estimated Power",
+        "func": "let current = Number(msg.payload);\n\n//Ignore sensor noise\nif (current < 0.20){\n    current = 0\n}\n// Voltage and Power Factor\nconst voltage = 230;\nconst pf = 1.0;\n\nlet power = current * voltage * pf;\n\n// Round to 1 decimal place\nmsg.payload = Number(power.toFixed(1));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1180,
+        "wires": [
+            [
+                "a9588eec36c22aaa",
+                "3e47d15bd8a7133d",
+                "4ca34d3c3c02abac"
+            ]
+        ]
+    },
+    {
+        "id": "09d2c39df0aff366",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Load Status",
+        "func": "let current = Number(msg.payload);\n\nif (current < 0.20)\nmsg.payload = \"STOPED\";\nelse if (current < 3)\nmsg.payload = \"RUNNING\";\nelse if (current < 7)\nmsg.payload = \"HIGH LOAD\";\nelse\nmsg.payload = \"OVERLOAD\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1100,
+        "wires": [
+            [
+                "70c59302b7f5b7ba"
+            ]
+        ]
+    },
+    {
+        "id": "a9588eec36c22aaa",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "Estimated Power",
+        "group": "9de4e8d777784e1d",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Estimated Power",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "W",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "Normal",
+                "textType": "str"
+            },
+            {
+                "from": "90",
+                "color": "#ffc800",
+                "text": "High",
+                "textType": "str"
+            },
+            {
+                "from": "150",
+                "color": "#ea5353",
+                "text": "Very High",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "250",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 570,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d150bee4e01d66e",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Current",
+        "func": "let current = Number(msg.payload);\n\n//Ignore sensor noise\nif (current < 0.20){\n    current = 0\n}\nmsg.payload = Number(current);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1140,
+        "wires": [
+            [
+                "16a4b3faf333af2d"
+            ]
+        ]
+    },
+    {
+        "id": "2761a838e8ac5597",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Energy Consumption",
+        "label": "Energy Consumption:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#cd4518",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1000,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "059101d1f7877a6e",
+        "type": "ui-button",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "name": "Reset Today's Energy Consumption",
+        "label": "Reset Today's Energy Consumption",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "restart_alt",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 260,
+        "y": 1260,
+        "wires": [
+            [
+                "e1881be6558c23a1"
+            ]
+        ]
+    },
+    {
+        "id": "e1881be6558c23a1",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Reset today Energy",
+        "func": "flow.set(\"todayEnergy\", 0);\n\nmsg.payload = \"0.0000 kWh\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1260,
+        "wires": [
+            [
+                "2761a838e8ac5597"
+            ]
+        ]
+    },
+    {
+        "id": "ed59d29355104a09",
+        "type": "ui-text",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Monthly Energy:",
+        "label": "Monthly Energy Consumption:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#ed3102",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 980,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "3e47d15bd8a7133d",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Energy Claculation",
+        "func": "let power = Number(msg.payload);\n\nlet delta = power / 3600000;\n\nlet today = flow.get(\"todayEnergy\") || 0;\nlet monthly = flow.get(\"monthlyEnergy\") || 0;\n\ntoday += delta;\nmonthly += delta;\n\nflow.set(\"todayEnergy\", today);\nflow.set(\"monthlyEnergy\", monthly);\n\nmsg.payload = {\n    today: today,\n    monthly: monthly\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1220,
+        "wires": [
+            [
+                "85c8482209801643",
+                "d573208fdd42675f"
+            ]
+        ]
+    },
+    {
+        "id": "85c8482209801643",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Select today",
+        "func": "msg.payload = msg.payload.today.toFixed(4) + \" kWh\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1220,
+        "wires": [
+            [
+                "2761a838e8ac5597"
+            ]
+        ]
+    },
+    {
+        "id": "d573208fdd42675f",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Select monthly",
+        "func": "msg.payload = msg.payload.monthly.toFixed(4) + \" kWh\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1300,
+        "wires": [
+            [
+                "ed59d29355104a09"
+            ]
+        ]
+    },
+    {
+        "id": "b078975c64bc7997",
+        "type": "inject",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 1340,
+        "wires": [
+            [
+                "2c993aa1a683352f"
+            ]
+        ]
+    },
+    {
+        "id": "2c993aa1a683352f",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Reset monthly Energy",
+        "func": "let today = new Date();\nif(today.getDate() === 1){\n    flow.set(\"monthlyEnergy\", 0);\n    msg.payload = \"0.0000 kWh\";\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1340,
+        "wires": [
+            [
+                "ed59d29355104a09"
+            ]
+        ]
+    },
+    {
+        "id": "d1b60eb023601cf8",
+        "type": "ui-gauge",
+        "z": "2d84ddd3499d6614",
+        "name": "Gas Level",
+        "group": "332108b66257035f",
+        "order": 7,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Gas Level",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "ADC",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#10c61c",
+                "text": "Safe",
+                "textType": "str"
+            },
+            {
+                "from": "1200",
+                "color": "#f7fb0e",
+                "text": "Warning",
+                "textType": "str"
+            },
+            {
+                "from": "1800",
+                "color": "#ea5353",
+                "text": "Danger",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "4095",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 500,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "299c74a4b66c0dbc",
+        "type": "ui-template",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<audio id=\"gasAlarm\" loop>\n<source src=\"https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg\" type=\"audio/ogg\">\n</audio>\n\n<script>\nconst alarm = document.getElementById(\"gasAlarm\");\n\nthis.$watch('msg', function(msg) {\n\nif (!msg) return;\n\nif (msg.payload === \"WARNING\" || msg.payload === \"DANGER\"){\n\nalarm.play().catch(() => {});\n\n} else {\n\nalarm.pause();\nalarm.currentTime = 0;\n\n}\n\n});\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 740,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7d21e97328b7cbe",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Gas Status & Alarm",
+        "func": "let gasStatus = Number(msg.payload);\nlet alarmMuted = flow.get(\"alarmMuted\") || false;\n\nif (gasStatus <= 1200){\n    flow.set(\"alarmMuted\", false);\n    msg.payload = \"SAFE\";\n}\nelse if (alarmMuted) {\n    msg.payload = \"MUTE\";\n}\nelse if (gasStatus <= 1800){\n    msg.payload = \"WARNING\";\n}\nelse{\n    msg.payload = \"DANGER\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [
+                "a4d9d806ce5b372b",
+                "299c74a4b66c0dbc",
+                "4344409f1d43f573"
+            ]
+        ]
+    },
+    {
+        "id": "d6a979c72382ea68",
+        "type": "ui-switch",
+        "z": "2d84ddd3499d6614",
+        "name": "Buzzer",
+        "label": "Alarm",
+        "group": "9de4e8d777784e1d",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 1460,
+        "wires": [
+            [
+                "3566eab26d0f8ca5"
+            ]
+        ]
+    },
+    {
+        "id": "a836ca6264c2907d",
+        "type": "mqtt out",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/alarm/ack",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "be0d1b6e95b75180",
+        "x": 380,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "0da7322b9118a8ea",
+        "type": "ui-button",
+        "z": "2d84ddd3499d6614",
+        "group": "332108b66257035f",
+        "name": "Silence Gas Alarm",
+        "label": "Silence Gas Alarm",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "a836ca6264c2907d",
+                "b81548273ad24205"
+            ]
+        ]
+    },
+    {
+        "id": "b81548273ad24205",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Alarm Muted",
+        "func": "flow.set(\"alarmMuted\", true);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4344409f1d43f573",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Gas event log",
+        "func": "let log = flow.get(\"gasLog\") || [];\nif (msg.payload === \"WARNING\" || msg.payload === \"DANGER\"){\n    let now = new Date();\n\nlet date =\nString(now.getDate()).padStart(2, '0') + \"/\" +\nString(now.getMonth() + 1).padStart(2, '0') + \"/\" +\nnow.getFullYear();\n\nlet time =\nString(now.getHours()).padStart(2, '0') + \":\" +\nString(now.getMinutes()).padStart(2, '0') + \":\" +\nString(now.getSeconds()).padStart(2, '0');\n    log.unshift({\n        Time: date + \" \" + time,\n        Event: msg.payload\n    });\n\n    log = log.slice(0, 1);\n    flow.set(\"gasLog\", log);\n    msg.payload = log;\n\n    return msg;\n}\n\nreturn null;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 400,
+        "wires": [
+            [
+                "9434275acc0cf391"
+            ]
+        ]
+    },
+    {
+        "id": "9434275acc0cf391",
+        "type": "ui-table",
+        "z": "2d84ddd3499d6614",
+        "group": "1c566ab799c8cdef",
+        "name": "Gas Leak Event Log",
+        "label": "Gas Leak History",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": "20",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 920,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37f6aeacb6788d9d",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Over power event log",
+        "func": "let log = flow.get(\"over-powerLog\") || [];\nif (msg.payload === \"HIGH\" || msg.payload === \"VERY HIGH\"){\n    let now = new Date();\n\nlet date =\nString(now.getDate()).padStart(2, '0') + \"/\" +\nString(now.getMonth() + 1).padStart(2, '0') + \"/\" +\nnow.getFullYear();\n\nlet time =\nString(now.getHours()).padStart(2, '0') + \":\" +\nString(now.getMinutes()).padStart(2, '0') + \":\" +\nString(now.getSeconds()).padStart(2, '0');\n    log.unshift({\n        Time: date + \" \" + time,\n        Event: msg.payload\n    });\n\n    log = log.slice(0, 1);\n    flow.set(\"over-powerLog\", log);\n    msg.payload = log;\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 1100,
+        "wires": [
+            [
+                "884f09b1d012052b"
+            ]
+        ]
+    },
+    {
+        "id": "4ca34d3c3c02abac",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "Power Status",
+        "func": "let powerStatus = Number(msg.payload);\n\nif (powerStatus <= 90.0){\n    msg.payload = \"NORMAL\";\n}\nelse if (powerStatus <= 150.0){\n    msg.payload = \"HIGH\";\n}\nelse{\n    msg.payload = \"VERY HIGH\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1180,
+        "wires": [
+            [
+                "37f6aeacb6788d9d"
+            ]
+        ]
+    },
+    {
+        "id": "884f09b1d012052b",
+        "type": "ui-table",
+        "z": "2d84ddd3499d6614",
+        "group": "99b64f2fb689c237",
+        "name": "Over Power Event Log",
+        "label": "Over Powr History",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": "20",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 980,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f60de2a092d4bd5",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "OFFLINE - 0",
+        "func": "if (msg.payload === \"OFFLINE\"){\n    msg.payload = 0;\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "941cd93edc518334",
+                "1a950652f0d63493",
+                "16a4b3faf333af2d",
+                "a9588eec36c22aaa",
+                "d1b60eb023601cf8"
+            ]
+        ]
+    },
+    {
+        "id": "e33ba9fcb109779c",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "OFFLINE - N",
+        "func": "if (msg.payload === \"OFFLINE\"){\n    msg.payload = \"NOT CONNECTED\";\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "ff4da083ecf70860",
+                "3f8ca378f735674f",
+                "a4d9d806ce5b372b",
+                "70c59302b7f5b7ba",
+                "299c74a4b66c0dbc"
+            ]
+        ]
+    },
+    {
+        "id": "5d408bb9a8db8106",
+        "type": "mqtt in",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/gas",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "be0d1b6e95b75180",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "d1b60eb023601cf8",
+                "d7d21e97328b7cbe"
+            ]
+        ]
+    },
+    {
+        "id": "f3ac0c0b6944c0ac",
+        "type": "ui-button",
+        "z": "2d84ddd3499d6614",
+        "group": "9de4e8d777784e1d",
+        "name": "Restart Device",
+        "label": "Restart Device",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 140,
+        "y": 1660,
+        "wires": [
+            [
+                "347475a8a8056bac"
+            ]
+        ]
+    },
+    {
+        "id": "347475a8a8056bac",
+        "type": "mqtt out",
+        "z": "2d84ddd3499d6614",
+        "name": "",
+        "topic": "factory/room101/device/restart",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "be0d1b6e95b75180",
+        "x": 430,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "806ac56ce655c08f",
+        "type": "function",
+        "z": "2d84ddd3499d6614",
+        "name": "OFFLINE - OFF",
+        "func": "if (msg.payload === \"OFFLINE\"){\n    msg.payload = \"OFF\";\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 760,
+        "wires": [
+            [
+                "3cf99a89ca4e2606",
+                "25398f45ed796958"
+            ]
+        ]
+    }
+]
