@@ -91,7 +91,7 @@ The system provides real-time monitoring of environmental conditions, gas levels
 
 The wiring diagram shows the ESP32 GPIO assignments, sensor connections, power distribution, relay and buzzer driver circuits, and the overall system architecture.
 
-![ESP32 IoT System Wiring Diagram](Hardware_Wiring_Diagram.PNG)
+![ESP32 IoT System Wiring Diagram](/Documentation/Hardware_Wiring_Diagram.PNG)
 
 
 ⚙️ Automation Logic
@@ -323,12 +323,12 @@ GitHub: thulangunarathne-iot
 
 ### Node-RED Dashboard
 
-![Node-RED Dashboard](Node-RED%20Dashboard.PNG)
+![Node-RED Dashboard](/Images/Node-RED%20Dashboard.PNG)
 
 ### FlowFuse Cloud Dashboard
 
-![FlowFuse Cloud Dashboard](FlowFuse%20Dashboard%201.PNG)
+![FlowFuse Cloud Dashboard](/Images/FlowFuse%20Dashboard%201.PNG)
 
-### Gas Event Log
+### Complete Device
 
-![Gas Event Log](Gas%20Event%20Log%20-%20FlowFuse.PNG)
+![Complete Device](/Complete_Device.PNG)
