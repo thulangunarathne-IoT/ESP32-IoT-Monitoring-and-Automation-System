@@ -331,4 +331,4 @@ GitHub: thulangunarathne-iot
 
 ### Complete Device
 
-![Complete Device](/Complete_Device.PNG)
+![Complete Device](/Images/Complete_Device.png)
